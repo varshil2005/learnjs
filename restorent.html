@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #copun {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <form action="" onsubmit="handlsubmit()">
+        <select name="food" id="food">
+            <option value="0">--select food</option>
+            <option value="100">Burgar</option>
+            <option value="300">Pizza</option>
+            <option value="500">Combo</option>
+        </select>
+        <select name="food_qty" id="food_qty">
+            <option value="0">--select qty</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+        <br><br>
+
+        <select name="fries" id="fries">
+            <option value="0">--select fries</option>
+            <option value="150">yes</option>
+            <option value="0">no</option>
+        </select>
+        <select name="fries_qty" id="fries_qty">
+            <option value="0">--select fries qty</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+        </select>
+        <br><br>
+
+        <select name="cold_drink" id="cold_drink">
+            <option value="0">--select cold drink</option>
+            <option value="yes">yes</option>
+            <option value="no">no</option>
+        </select>
+        <select name="cd_type" id="cd_type">
+            <option value="0">--select cold drink</option>
+            <option value="20">pepsi</option>
+            <option value="25">maza</option>
+            <option value="30">thumps up</option>
+        </select>
+        <select name="cd_qty" id="cd_qty">
+            <option value="0">--select cold drink qty</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+        <br><br>
+
+        <input type="submit">
+    </form>
+    <br><br>
+    <div id="disp"></div>
+    <br><br>
+
+    <form action="" id="copun" onsubmit="handalcoupan()">
+        <input type="text" name="coupan" id="coupan" placeholder="coupan code">
+        <br><br>
+        <input type="submit">
+    </form>
+    <br><br>
+
+    <div id="bill"></div>    
+
+    <script src="js/restorent.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="" onsubmit="handalsalary()">
+        <input type="text" name="salary" id="salary" placeholder="enter salary"> 
+        <br><br>
+        <input type="submit">
+        <br><br>
+        <table border="1">
+            <tr>
+                <th>slab</th>
+                <th>rate</th>
+                <th>actule tax</th>
+            </tr>
+            
+            <tr>
+                <td>upto 3 lakha</td>
+                <td>nill</td>
+                <td id="slab1"></td>
+            </tr>
+    
+            <tr>
+                <td>3 lakha to 6 lakhs</td>
+                <td>5%</td>
+                <td id="slab2" ></td>
+            </tr>
+    
+            <tr>
+                <td>6 lakha to 9 lakhs</td>
+                <td>10%</td>
+                <td id="slab3"></td>
+            </tr>
+    
+            <tr>
+                <td>9 lakha to 12 lakhs</td>
+                <td>15%</td>
+                <td id="slab4"></td>
+            </tr>
+    
+            <tr>
+                <td>12 lakha to 15 lakhs</td>
+                <td>20%</td>
+                <td id="slab5"></td>
+            </tr>
+    
+            <tr>
+                <td>above 15 lakha</td>
+                <td>30%</td>
+                <td id="slab6"></td>
+            </tr>       
+    
+        </table>
+    <div id="taxt"></div>
+    </form>
+    <script src="js/text.js"></script>
+</body>
+</html>
