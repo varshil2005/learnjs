@@ -1,7 +1,7 @@
 let tax;
 function handalsalary() {
     event.preventDefault();
-    let print = 0 ;
+    let print = '';
     let  total;
     let salary = document.getElementById("salary").value;
     console.log(salary);
@@ -48,8 +48,9 @@ function handalsalary() {
        document.getElementById("slab6").innerHTML=slab6;
 
        total = slab1 + slab2 + slab3 + slab4 + slab5 + slab6;
-       print + print
-       `<p>total : ${total}</p>` 
+       print = print +`
+       <p>total : ${total}</p>
+       ` 
 
        document.getElementById("taxt").innerHTML=print;
 }
