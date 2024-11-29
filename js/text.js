@@ -16,8 +16,8 @@ function handalsalary() {
     if (salary <= 300000) {
         slab1 = 0;
     } else if (salary <= 600000) {
-        slab2 = (salary - 300000) * 0.02;
     } else if (salary <= 900000) {
+        slab2 = (salary - 300000) * 0.02;
         slab1 = 0;
         slab2 = 300000 * 0.05;
         slab3 = (salary - 600000) * 0.1;
