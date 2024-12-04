@@ -5,25 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        #table{
-            display: none;
-        }
+       #apt {
+        display: none;
+       }
     </style>
 </head>
 <body>
     
-    <form action="" onsubmit="">
-        <select name="" id="select" onclick="handlclik()">
+        <select name="" id="tre" onchange="handalchange()">
             <option value="0">--select treatment</option>
-            <option value="1">Teeth cleaning</option>
-            <option value="2">Fellings</option>
-            <option value="3">Root canal treatment</option>
-            <option value="4">RCT + cover</option>
-            <option value="5">Braces/Invisalign</option>
+            <option value="Teeth cleaning">Teeth cleaning</option>
+            <option value="Fillings">Fillings</option>
+            <option value="Root canal treatment">Root canal treatment</option>
+            <option value="RCT + cover">RCT + cover</option>
+            <option value="Braces/Invisalign">Braces/Invisalign</option>
         </select>
+        <br><br> 
+        <div id="disp"></div>
+        <br>
+        
+        <form action="" id="apt" onsubmit="handleapt()">
+            <input type="date" name="date" id="aptd">
+            <br><br>
+            <input type="submit">
+        </form>
         <br><br>
-        <div id="table"></div>
-    </form>
+
+        <div id="aptable">
+
+        </div>
 
     <script src="js/hospital.js"></script>
 </body>

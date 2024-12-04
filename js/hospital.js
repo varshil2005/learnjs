@@ -1,58 +1,65 @@
-function handlclik() {
+
+let tre = '';
+let cost = 0, seat = 0;
+
+function handalchange() {
     event.preventDefault();
 
-    let select = document.getElementById("select").value;
+    tre = document.getElementById("tre").value;
+
+    if (tre == 'Teeth cleaning') {
+        cost = 500;
+        seat = 1;
+    } else if (tre == 'Fillings') {
+        cost = 1500;
+        seat = 2;
+    } else if (tre == 'Root canal treatment') {
+        cost = 2500;
+        seat = 4;
+    } else if (tre == 'RCT + cover') {
+        cost = 12000;
+        seat = 6;
+    } else if (tre == 'Braces/Invisalign') {
+        cost = 36000;
+        seat = 12;
+    }
+
     let print = `
-        <table border="1">
+            <table border = "1">
             <tr>
                 <th>Treatment</th>
                 <th>Seatting</th>
                 <th>Cost</th>
-            </tr>`;
+            </tr>
+            <tr>
+                <td>${tre}</td>
+                <td>${seat}</td>
+                <td>${cost}</td>
+            </tr>
+            <table>
+            `;
+    document.getElementById("disp").innerHTML = print;
+    document.getElementById("apt").style.display = "block";
+}
 
-    if (select == 1) {
-        print = print + `
-        <tr>
-            <td>Teeth cleaning</td>
-               <td>${1}</td>
-               <td>${500}</td>
-        </tr>
-        `;
-    } else if (select == 2) {
-        print = print + `
-        <tr>
-            <td>Fellings</td>
-               <td>${2}</td>
-               <td>${1500}</td>
-        </tr>
-        `;
-    } else if (select == 3) {
-        print = print + `
-        <tr>
-            <td>Root canal treatment</td>
-               <td>${4}</td>
-               <td>${2500}</td>
-        </tr>
-        `;
-    } else if (select == 4) {
-        print = print + `
-        <tr>
-            <td>RCT + cover</td>
-               <td>${6}</td>
-               <td>${12000}</td>
-        </tr>
-        `;
-    } else if (select == 2) {
-        print = print + `
-        <tr>
-            <td>Braces/Invisalign</td>
-               <td>${12}</td>
-               <td>${35000}</td>
-        </tr>
-        `;
-    } 
-    print = print + `<table>`
-    document.getElementById("table").innerHTML=print
-    document.getElementById("table").style.display = "block";
+function handleapt() {
+    event.preventDefault();
+    let date = document.getElementById("aptd").value;
 
+    print += `<table border="1">
+    <tr>
+        <th>treatment</th>
+        <th>date</th>
+        <th>cost</th>
+    </tr>`;
+    for (let i = 1; i <= seat; i++) {
+        print+=`
+         <tr>
+            <th>${tre}</th>
+            <th>${date}</th>
+            <th>${cost/seat}</th>
+        </tr>`;
+    }
+    print += `</table>`;
+    document.getElementById("aptable").innerHTML = print;
 }
