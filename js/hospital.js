@@ -46,6 +46,8 @@ function handleapt() {
     event.preventDefault();
     let date = document.getElementById("aptd").value;
 
+    let d = new Date(date);
+
     print += `<table border="1">
     <tr>
         <th>treatment</th>
@@ -56,9 +58,11 @@ function handleapt() {
         print+=`
          <tr>
             <th>${tre}</th>
-            <th>${date}</th>
+            <th>${d.toLocaleDateString()}</th>
             <th>${cost/seat}</th>
-        </tr>`;
+        </tr>`
+
+        d.setDate(d.getDate(date)+7);
     }
     print += `</table>`;
     document.getElementById("aptable").innerHTML = print;
